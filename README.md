@@ -1,12 +1,14 @@
-# Energy Production in France and Germany (2015)
 
-This project displays a pie chart visualizing the energy production sources in France and Germany for the year 2015. The data is fetched from Google's Data Commons.
+# Production d'énergie en France et en Allemagne (2015)
 
-## Visualization
+Ce projet affiche un graphique en secteurs visualisant les sources de production d'énergie en France et en Allemagne pour l'année 2015. Les données sont extraites de Data Commons de Google.
 
-![Energy Production in France and Germany (2015)](screenshot.jpg)
+## Visualisation
 
-## Data Sources
+![Production d'énergie en France et en Allemagne (2015)](screenshot.jpg)
+
+## Sources des données
 
 *   **Data Commons:**
     *   [https://datacommons.org/](https://datacommons.org/)
+
