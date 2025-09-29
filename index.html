@@ -1,16 +1,29 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Energy Production in France (2015)</title>
+    <title>Energy Production in France and Germany (2015)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            display: inline-block;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Energy Production in France (2015)</h1>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <h1>Energy Production in France and Germany (2015)</h1>
+    <div class="chart-container">
+        <h2>France</h2>
+        <canvas id="franceChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2>Germany</h2>
+        <canvas id="germanyChart"></canvas>
+    </div>
     <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
+        var franceCtx = document.getElementById('franceChart').getContext('2d');
+        var franceChart = new Chart(franceCtx, {
             type: 'pie',
             data: {
                 labels: ['Nuclear', 'Renewable', 'Fossil Fuels', 'Other'],
@@ -33,7 +46,35 @@
                 }]
             },
             options: {
-                responsive: false
+                responsive: true
+            }
+        });
+
+        var germanyCtx = document.getElementById('germanyChart').getContext('2d');
+        var germanyChart = new Chart(germanyCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Nuclear', 'Renewable', 'Fossil Fuels', 'Other'],
+                datasets: [{
+                    label: 'Energy Production in Germany (2015)',
+                    data: [14.16, 29.23, 54.44, 2.17],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
             }
         });
     </script>
